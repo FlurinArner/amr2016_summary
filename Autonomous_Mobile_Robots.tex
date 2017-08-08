@@ -741,15 +741,29 @@
   $\sigma$):
   \vmspace
   \begin{center}
-    $
-    G_\sigma = (x, y) = \frac{1}{2\pi\sigma^2}
+    % $     % Version more similar to 2016 version, WITH the UNDERBRACE
+    % G_\sigma(x, y) = \frac{1}{2\pi\sigma^2}
+    % % G_\sigma = \frac{1}{2\pi\sigma^2}
+    % \,\mathrm e^{-\frac{x^2 + y^2}{2 \sigma ^2}}
+    % =
+    % \underbrace{\tfrac{1}{\sigma \sqrt{2\pi}}
+    % \,\mathrm e^{\frac{-x^2}{2\sigma^2}}}_{g_\sigma(x)}
+    % \cdot
+    % \underbrace{\tfrac{1}{\sigma \sqrt{2\pi}}
+    % \,\mathrm e^{\frac{-y^2}{2\sigma^2}}}_{g_\sigma(y)}.
+    % $
+    $       % Slightly different version, WITHOUT the UNDERBRACE
+    % G_\sigma(x, y) = \frac{1}{2\pi\sigma^2}
+    G_\sigma = \frac{1}{2\pi\sigma^2}
     \,\mathrm e^{-\frac{x^2 + y^2}{2 \sigma ^2}}
     =
-    \underbrace{\tfrac{1}{\sigma \sqrt{2\pi}}
-    \,\mathrm e^{-\frac{-x^2}{2\sigma^2}}}_{g_\sigma(x)}
+    g_\sigma(x) \cdot {g_\sigma(y)}
+    =
+    \tfrac{1}{\sigma \sqrt{2\pi}}
+    \mathrm e^{\frac{-x^2}{2\sigma^2}}
     \cdot
-    \underbrace{\tfrac{1}{\sigma \sqrt{2\pi}}
-    \,\mathrm e^{-\frac{-y^2}{2\sigma^2}}}_{g_\sigma(y)}.
+    \tfrac{1}{\sigma \sqrt{2\pi}}
+    \mathrm e^{\frac{-y^2}{2\sigma^2}}
     $
   \end{center}
 \end{minipage}
@@ -1058,7 +1072,7 @@
   Combine them to get the \textbf{theorem of total probability}:
   \vmspace
   \begin{center}
-    $p(x) = \sum_y p(y | x) p(x).$
+    $p(x) = \sum_y p(x | y) p(y).$
   \end{center}
 \end{minipage}
 
